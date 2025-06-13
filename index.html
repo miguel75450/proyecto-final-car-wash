@@ -4,11 +4,11 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-     <title>Menu CSS3</title>
+     <title>Car Wash MOC</title>
 
      <style>
           *{
-			margin: 0;
+               margin: 0;
                padding: 0;
                font-family: 'Varela Round', sans-serif;
           }
@@ -19,17 +19,14 @@
                align-items: center;
                padding: 10px 0px;
                border-bottom: 1px solid blue;
-               margin-bottom: 100px;
-              background-color: black;
-
+               margin-bottom: 50px;
+               background-color: black;
           }
-
 
           li{
                display: inline-block;
                padding: 0px 20px;
                list-style: none;
-
           }
 
           .logo{
@@ -52,31 +49,85 @@
                color: #fff;
           }
 
+          body {
+               background-color: #f4f4f4;
+               text-align: center;
+               padding: 20px;
+          }
+
+          .container {
+               display: flex;
+               justify-content: center;
+               gap: 20px;
+               flex-wrap: wrap;
+          }
+
+          .package {
+               background-color: white;
+               padding: 20px;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+               width: 300px;
+               text-align: center;
+          }
+
+          h2 {
+               color: #1e11d1;
+          }
+
+          .package p {
+               font-size: 14px;
+               color: #333;
+          }
+
+          .btn-select {
+               display: block;
+               background-color: #1e11d1;
+               color: white;
+               padding: 10px;
+               border-radius: 5px;
+               text-decoration: none;
+               font-weight: bold;
+               margin-top: 10px;
+          }
+
+          .btn-select:hover {
+               background-color: #0d0a8f;
+          }
      </style>
 </head>
-
 <body>
      <header>
-          <img src="MOC.png" alt="" class="logo" >
+          <img src="MOC.png" alt="" class="logo">
           <nav>
                <ul>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Sevicios</a></li>
-                    <li><a href="">Portafolio</a></li>
+                    <li><a href="">Redes</a></li>
+                    <li><a href="">Servicios adicionales</a></li>
+                    <li><a href="">Promociones</a></li>
                     <li><a href="">Multimedia</a></li>
                     <li><a href="">Contacto</a></li>
                </ul>
           </nav>
           <a href="" class="btn">Login</a>
      </header>
-     <header>
 
-
-
-
-        
-     </header>
-
+     <h1>Paquetes de Lavado</h1>
+     <div class="container">
+          <div class="package">
+               <h2>Paquete 1</h2>
+               <p>Incluye aspirado de interior, lavado de tapetes de plástico, hidratado de tapetes, lavado con jabón con cera y alta espuma, lavado de tolvas, llantas y rines con abrillantador.</p>
+               <a href="#" class="btn-select">Seleccionar Paquete</a>
+          </div>
+          <div class="package">
+               <h2>Paquete 2</h2>
+               <p>Incluye todo lo del paquete 1 y además hidratador para proteger los plásticos de los rayos del sol.</p>
+               <a href="#" class="btn-select">Seleccionar Paquete</a>
+          </div>
+          <div class="package">
+               <h2>Paquete 3</h2>
+               <p>Incluye todo lo del paquete 2 y se le agrega una capa de cera en toda la parte exterior del auto.</p>
+               <a href="#" class="btn-select">Seleccionar Paquete</a>
+          </div>
+     </div>
 </body>
-
 </html>
