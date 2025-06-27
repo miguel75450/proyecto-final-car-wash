@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+     <title>Formulario de Selección</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               font-family: 'Varela Round', sans-serif;
+          }
+          body {
+               background-color: #f4f4f4;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               text-align: center;
+          }
+          .form-box {
+               background-color: white;
+               padding: 40px;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+               width: 90%;
+               max-width: 400px;
+          }
+          h2 {
+               color: #1e11d1;
+               margin-bottom: 20px;
+          }
+          input, select {
+               width: 100%;
+               padding: 10px;
+               margin: 10px 0;
+               border-radius: 5px;
+               border: 1px solid #ccc;
+          }
+          .btn-submit {
+               background-color: #1e11d1;
+               color: white;
+               border: none;
+               padding: 12px;
+               font-weight: bold;
+               text-transform: uppercase;
+               border-radius: 5px;
+               cursor: pointer;
+               transition: background-color 0.3s ease;
+          }
+          .btn-submit:hover {
+               background-color: #0d0a8f;
+          }
+     </style>
+</head>
+<body>
+    <p>Incluye todo lo del paquete 2 y se le agrega una capa de cera en toda la parte exterior del auto.</p>
+     <div class="form-box">
+          <h2>Selecciona tu paquete</h2>
+          <form action="gracias.html" method="post">
+               <input type="text" name="nombre" placeholder="Tu nombre" required>
+               <input type="email" name="email" placeholder="Tu correo" required>
+               <select name="paquete" required>
+                    <option value="">-- Elige un paquete --</option>
+                    <option value="Paquete 3">Paquete 3</option>
+               </select>
+               <button type="submit" class="btn-submit">Enviar</button>
+          </form>
+     </div>
+
+     <script>
+          const params = new URLSearchParams(window.location.search);
+          const paqueteSeleccionado = params.get('paquete');
+          if (paqueteSeleccionado) {
+               document.querySelector('select[name="paquete"]').value = paqueteSeleccionado;
+          }
+     </script>
+</body>
+</html>
